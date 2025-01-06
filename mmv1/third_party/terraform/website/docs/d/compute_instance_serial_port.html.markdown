@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_instance_serial_port"
 description: |-
   Get the serial port output from a Compute Instance.
 ---
 
-# google\_compute\_instance\_serial\_port
+# google_compute_instance_serial_port
 
 Get the serial port output from a Compute Instance. For more information see
 the official [API](https://cloud.google.com/compute/docs/instances/viewing-serial-port-output) documentation.

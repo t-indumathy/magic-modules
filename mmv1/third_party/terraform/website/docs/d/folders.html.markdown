@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Platform"
-page_title: "Google: google_folders"
 description: |-
   Retrieve a set of folders based on a parent ID.
 ---
 
-# google\_folders
+# google_folders
 
 Retrieve information about a set of folders based on a parent ID. See the
 [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list)
@@ -34,7 +33,7 @@ The following arguments are supported:
 
 The following attributes are exported:
 
-* `folders` - A list of projects matching the provided filter. Structure is defined below.
+* `folders` - A list of folders matching the provided filter. Structure is defined below.
 
 The `folders` block supports:
 

@@ -1,11 +1,10 @@
 ---
 subcategory: "Runtime Configurator"
-page_title: "Google: google_runtimeconfig_config"
 description: |-
   Get information about a Google Cloud RuntimeConfig.
 ---
 
-# google\_runtimeconfig\_config
+# google_runtimeconfig_config
 
 To get more information about RuntimeConfigs, see:
 

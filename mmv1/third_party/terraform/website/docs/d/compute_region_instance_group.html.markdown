@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_region_instance_group"
 description: |-
   Get the instances inside a Compute Region Instance Group within GCE.
 ---
 
-# google\_compute\_region\_instance\_group
+# google_compute_region_instance_group
 
 Get a Compute Region Instance Group within GCE.
 For more information, see [the official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/latest/regionInstanceGroups).

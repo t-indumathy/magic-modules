@@ -1,11 +1,10 @@
 ---
 subcategory: "Memorystore (Redis)"
-page_title: "Google: google_redis_instance"
 description: |-
   Get information about a Google Cloud Redis instance.
 ---
 
-# google\_redis\_instance
+# google_redis_instance
 
 Get info about a Google Cloud Redis instance.
 

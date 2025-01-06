@@ -1,11 +1,10 @@
 ---
 subcategory: "Container Registry"
-page_title: "Google: google_container_registry_image"
 description: |-
   Get URLs for a given project's container registry image.
 ---
 
-# google\_container\_registry\_image
+# google_container_registry_image
 
 This data source fetches the project name, and provides the appropriate URLs to use for container registry for this project.
 

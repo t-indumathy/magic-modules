@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_global_address"
 description: |-
   Get the IP address from a static address reserved for a Global Forwarding Rule.
 ---
 
-# google\_compute\_global\_address
+# google_compute_global_address
 
 Get the IP address from a static address reserved for a Global Forwarding Rule which are only used for HTTP load balancing. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/globalAddresses) documentation.

@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Platform"
-page_title: "Google: google_organization_iam_custom_role"
 description: |-
  Allows management of a customized Cloud IAM organization role.
 ---
 
-# google\_organization\_iam\_custom\_role
+# google_organization_iam_custom_role
 
 Allows management of a customized Cloud IAM organization role. For more information see
 [the official documentation](https://cloud.google.com/iam/docs/understanding-custom-roles)

@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_address"
 description: |-
   Get the IP address from a static address.
 ---
 
-# google\_compute\_address
+# google_compute_address
 
 Get the IP address from a static address. For more information see
 the official [API](https://cloud.google.com/compute/docs/reference/latest/addresses/get) documentation.

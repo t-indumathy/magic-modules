@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Platform"
-page_title: "Google: google_service_account"
 description: |-
  Allows management of a Google Cloud Platform service account.
 ---
 
-# google\_service\_account
+# google_service_account
 
 Allows management of a Google Cloud service account.
 
@@ -52,6 +51,8 @@ The following arguments are supported:
 * `project` - (Optional) The ID of the project that the service account will be created in.
     Defaults to the provider project configuration.
 
+* `create_ignore_already_exists` - (Optional) If set to true, skip service account creation if a service account with the same email already exists.
+
 ## Attributes Reference
 
 In addition to the arguments listed above, the following computed attributes are
@@ -72,7 +73,7 @@ exported:
 ## Timeouts
 
 This resource provides the following
-[Timeouts](/docs/configuration/resources.html#timeouts) configuration options:
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options: configuration options:
 
 - `create` - Default is 5 minutes.
 
@@ -80,6 +81,19 @@ This resource provides the following
 
 Service accounts can be imported using their URI, e.g.
 
+* `projects/{{project_id}}/serviceAccounts/{{email}}`
+
+In Terraform v1.5.0 and later, use an [`import` block](https://developer.hashicorp.com/terraform/language/import) to import service accounts using one of the formats above. For example:
+
+```tf
+import {
+  id = "projects/{{project_id}}/serviceAccounts/{{email}}"
+  to = google_service_account.default
+}
 ```
-$ terraform import google_service_account.my_sa projects/my-project/serviceAccounts/my-sa@my-project.iam.gserviceaccount.com
+
+When using the [`terraform import` command](https://developer.hashicorp.com/terraform/cli/commands/import), service accounts can be imported using one of the formats above. For example:
+
+```
+$ terraform import google_service_account.default projects/{{project_id}}/serviceAccounts/{{email}}
 ```

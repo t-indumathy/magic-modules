@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Storage"
-page_title: "Google: google_storage_object_acl"
 description: |-
   Creates a new object ACL in Google Cloud Storage.
 ---
 
-# google\_storage\_object\_acl
+# google_storage_object_acl
 
 Authoritatively manages the access control list (ACL) for an object in a Google
 Cloud Storage (GCS) bucket. Removing a `google_storage_object_acl` sets the

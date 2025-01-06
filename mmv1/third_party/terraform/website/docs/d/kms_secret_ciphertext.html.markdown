@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Key Management Service"
-page_title: "Google: google_kms_secret_ciphertext"
 description: |-
   Encrypts secret data with Google Cloud KMS and provides access to the ciphertext
 ---
 
-# google\_kms\_secret\_ciphertext
+# google_kms_secret_ciphertext
 
 !> **Warning:** This data source is deprecated. Use the [`google_kms_secret_ciphertext`](../r/kms_secret_ciphertext.html) **resource** instead.
 

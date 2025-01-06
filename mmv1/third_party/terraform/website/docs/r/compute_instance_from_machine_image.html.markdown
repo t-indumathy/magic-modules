@@ -1,6 +1,5 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_instance_from_machine_image"
 description: |-
   Manages a VM instance resource within GCE.
 ---
@@ -8,7 +7,7 @@ description: |-
 ~> **Warning:** This resource is in beta, and should be used with the terraform-provider-google-beta provider.
 See [Provider Versions](https://terraform.io/docs/providers/google/guides/provider_versions.html) for more details on beta resources.
 
-# google\_compute\_instance\_from\_machine\_image
+# google_compute_instance_from_machine_image
 
 Manages a VM instance resource within GCE. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/instances)
@@ -68,7 +67,7 @@ for details.
 ## Timeouts
 
 This resource provides the following
-[Timeouts](/docs/configuration/resources.html#timeouts) configuration options:
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options: configuration options:
 
 - `create` - Default is 6 minutes.
 - `update` - Default is 6 minutes.

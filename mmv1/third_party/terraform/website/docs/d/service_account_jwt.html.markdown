@@ -1,13 +1,12 @@
 ---
 subcategory: "Cloud Platform"
 layout: "google"
-page_title: "Google: google_service_account_jwt"
 sidebar_current: "docs-google-service-account-jwt"
 description: |-
   Produces an arbitrary self-signed JWT for service accounts
 ---
 
-# google\_service\_account\_jwt
+# google_service_account_jwt
 
 This data source provides a [self-signed JWT](https://cloud.google.com/iam/docs/create-short-lived-credentials-direct#sa-credentials-jwt).  Tokens issued from this data source are typically used to call external services that accept JWTs for authentication.
 

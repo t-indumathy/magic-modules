@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Functions (2nd gen)"
-page_title: "Google: google_cloudfunctions2_function"
 description: |-
   Get information about a Google Cloud Function (2nd gen).
 ---
 
-# google\_cloudfunctions2\_function
+# google_cloudfunctions2_function
 
 Get information about a Google Cloud Function (2nd gen). For more information see:
 

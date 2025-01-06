@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud SQL"
-page_title: "Google: google_sql_ssl_cert"
 description: |-
   Creates a new SQL Ssl Cert in Google Cloud SQL.
 ---
 
-# google\_sql\_ssl\_cert
+# google_sql_ssl_cert
 
 Creates a new Google SQL SSL Cert on a Google SQL Instance. For more information, see the [official documentation](https://cloud.google.com/sql/), or the [JSON API](https://cloud.google.com/sql/docs/mysql/admin-api/v1beta4/sslCerts).
 
@@ -67,7 +66,7 @@ exported:
 ## Timeouts
 
 This resource provides the following
-[Timeouts](/docs/configuration/resources.html#timeouts) configuration options:
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options: configuration options:
 
 - `create` - Default is 10 minutes.
 - `delete` - Default is 10 minutes.

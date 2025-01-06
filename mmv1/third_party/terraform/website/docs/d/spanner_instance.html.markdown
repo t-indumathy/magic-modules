@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Spanner"
-page_title: "Google: google_spanner_instance"
 description: |-
   Get a spanner instance from Google Cloud
 ---
 
-# google\_spanner\_instance
+# google_spanner_instance
 
 Get a spanner instance from Google Cloud by its name.
 

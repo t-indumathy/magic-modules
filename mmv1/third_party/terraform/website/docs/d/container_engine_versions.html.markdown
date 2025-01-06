@@ -1,13 +1,15 @@
 ---
 subcategory: "Kubernetes (Container) Engine"
-page_title: "Google: google_container_engine_versions"
 description: |-
   Provides lists of available Google Kubernetes Engine versions for masters and nodes.
 ---
 
-# google\_container\_engine\_versions
+# google_container_engine_versions
 
 Provides access to available Google Kubernetes Engine versions in a zone or region for a given project.
+
+To get more information about GKE versions, see:
+  * [The API reference](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations/getServerConfig)
 
 -> If you are using the `google_container_engine_versions` datasource with a
 regional cluster, ensure that you have provided a region as the `location` to
@@ -31,8 +33,12 @@ resource "google_container_cluster" "foo" {
   initial_node_count = 1
 }
 
-output "stable_channel_version" {
+output "stable_channel_default_version" {
   value = data.google_container_engine_versions.central1b.release_channel_default_version["STABLE"]
+}
+
+output "stable_channel_latest_version" {
+  value = data.google_container_engine_versions.central1b.release_channel_latest_version["STABLE"]
 }
 ```
 
@@ -64,4 +70,5 @@ The following attributes are exported:
 * `latest_master_version` - The latest version available in the given zone for use with master instances.
 * `latest_node_version` - The latest version available in the given zone for use with node instances.
 * `default_cluster_version` - Version of Kubernetes the service deploys by default.
-* `release_channel_default_version` - A map from a release channel name to the channel's default version.
+* `release_channel_default_version` - A map from a release channel name to the channel's default version. See the docs on [available release channel names](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.Channel_1) for more details.
+* `release_channel_latest_version` - A map from a release channel name to the channel's latest version. See the docs on [available release channel names](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1/projects.locations.clusters#Cluster.Channel_1) for more details.

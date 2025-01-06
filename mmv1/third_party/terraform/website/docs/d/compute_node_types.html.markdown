@@ -1,12 +1,11 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_node_types"
 description: |-
   Provides list of available Google Compute Engine node types for
   sole-tenant nodes.
 ---
 
-# google\_compute\_node\_types
+# google_compute_node_types
 
 Provides available node types for Compute Engine sole-tenant nodes in a zone
 for a given project. For more information, see [the official documentation](https://cloud.google.com/compute/docs/nodes/#types) and [API](https://cloud.google.com/compute/docs/reference/rest/v1/nodeTypes).

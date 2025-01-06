@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_router"
 description: |-
   Get a Cloud Router within GCE.
 ---
 
-# google\_compute\_router
+# google_compute_router
 
 Get a router within GCE from its name and VPC.
 

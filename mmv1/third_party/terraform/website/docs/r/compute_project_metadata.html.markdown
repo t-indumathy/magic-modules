@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_project_metadata"
 description: |-
   Manages common instance metadata
 ---
 
-# google\_compute\_project\_metadata
+# google_compute_project_metadata
 
 Authoritatively manages metadata common to all instances for a project in GCE. For more information see
 [the official documentation](https://cloud.google.com/compute/docs/storing-retrieving-metadata)
@@ -67,13 +66,28 @@ In addition to the arguments listed above, the following computed attributes are
 ## Timeouts
 
 This resource provides the following
-[Timeouts](/docs/configuration/resources.html#timeouts) configuration options:
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options: configuration options:
 
 - `create` - Default is 4 minutes (also used for update).
 - `delete` - Default is 4 minutes.
 
 ## Import
 
-This resource can be imported using the project ID:
+Project metadata can be imported using the project ID:
 
-`terraform import google_compute_project_metadata.foo my-project-id`
+* `{{project_id}}`
+
+In Terraform v1.5.0 and later, use an [`import` block](https://developer.hashicorp.com/terraform/language/import) to import project metadata using one of the formats above. For example:
+
+```tf
+import {
+  id = "{{project_id}}"
+  to = google_compute_project_metadata.default
+}
+```
+
+When using the [`terraform import` command](https://developer.hashicorp.com/terraform/cli/commands/import), project metadata can be imported using one of the formats above. For example:
+
+```
+$ terraform import google_compute_project_metadata.default {{project_id}}
+```

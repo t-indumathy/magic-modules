@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Platform"
-page_title: "Google: google_organization"
 description: |-
   Get information about a Google Cloud Organization.
 ---
 
-# google\_organization
+# google_organization
 
 Get information about a Google Cloud Organization. Note that you must have the `roles/resourcemanager.organizationViewer` role (or equivalent permissions) at the organization level to use this datasource.
 

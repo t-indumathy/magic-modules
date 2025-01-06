@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_forwarding_rule"
 description: |-
   Get a regional forwarding rule within GCE.
 ---
 
-# google\_compute\_forwarding\_rule
+# google_compute_forwarding_rule
 
 Get a forwarding rule within GCE from its name.
 

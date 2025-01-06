@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_network_endpoint_group"
 description: |-
   Retrieve Network Endpoint Group's details.
 ---
 
-# google\_compute\_network\_endpoint\_group
+# google_compute_network_endpoint_group
 
 Use this data source to access a Network Endpoint Group's attributes.
 
@@ -36,7 +35,7 @@ The following arguments are supported:
 
 * `zone` - (Optional) The Network Endpoint Group availability zone.
 
-* `self_link` - (Optional) The Network Endpoint Group self\_link.
+* `self_link` - (Optional) The Network Endpoint Group self_link.
 
 ## Attributes Reference
 

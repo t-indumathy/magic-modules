@@ -1,6 +1,5 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_shared_vpc_host_project"
 description: |-
  Enables the Google Compute Engine Shared VPC feature for a project, assigning it as a host project.
 ---
@@ -51,15 +50,29 @@ In addition to the arguments listed above, the following computed attributes are
 ## Timeouts
 
 This resource provides the following
-[Timeouts](/docs/configuration/resources.html#timeouts) configuration options:
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options: configuration options:
 
 - `create` - Default is 4 minutes.
 - `delete` - Default is 4 minutes.
 
 ## Import
 
-Google Compute Engine Shared VPC host project feature can be imported using the `project`, e.g.
+Google Compute Engine Shared VPC host project feature can be imported using `project`, e.g.
+
+* `{{project_id}}`
+
+In Terraform v1.5.0 and later, use an [`import` block](https://developer.hashicorp.com/terraform/language/import) to import Google Compute Engine Shared VPC host projects using one of the formats above. For example:
+
+```tf
+import {
+  id = "{{project_id}}"
+  to = google_compute_shared_vpc_host_project.default
+}
+```
+
+When using the [`terraform import` command](https://developer.hashicorp.com/terraform/cli/commands/import), Google Compute Engine Shared VPC host projects can be imported using one of the formats above. For example:
+
 
 ```
-$ terraform import google_compute_shared_vpc_host_project.host host-project-id
+$ terraform import google_compute_shared_vpc_host_project.default {{project_id}}
 ```

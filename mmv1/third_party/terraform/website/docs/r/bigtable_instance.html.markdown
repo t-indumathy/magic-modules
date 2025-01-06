@@ -1,6 +1,5 @@
 ---
 subcategory: "Cloud Bigtable"
-page_title: "Google: google_bigtable_instance"
 description: |-
   Creates a Google Bigtable instance.
 ---
@@ -79,7 +78,7 @@ resource "google_bigtable_instance" "production-instance" {
 
 The following arguments are supported:
 
-* `name` - (Required) The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance.
+* `name` - (Required) The name (also called Instance Id in the Cloud Console) of the Cloud Bigtable instance. Must be 6-33 characters and must only contain hyphens, lowercase letters and numbers.
 
 * `cluster` - (Required) A block of cluster configuration options. This can be specified at least once, and up 
 to as many as possible within 8 cloud regions. Removing the field entirely from the config will cause the provider
@@ -98,25 +97,35 @@ to default to the backend value. See [structure below](#nested_cluster).
 
 * `display_name` - (Optional) The human-readable display name of the Bigtable instance. Defaults to the instance `name`.
 
-* `deletion_protection` - (Optional) Whether or not to allow Terraform to destroy the instance. Unless this field is set to false
-in Terraform state, a `terraform destroy` or `terraform apply` that would delete the instance will fail.
+* `force_destroy` - (Optional) Deleting a BigTable instance can be blocked if any backups are present in the instance. When `force_destroy` is set to true, Terraform will delete all backups found in the BigTable instance before attempting to delete the instance itself. Defaults to false.
+
+* `deletion_protection` - (Optional) Whether Terraform will be prevented from destroying the instance. 
+  When the field is set to true or unset in Terraform state, a `terraform apply` or `terraform destroy` that would delete
+  the instance will fail. When the field is set to false, deleting the instance is allowed.
 
 * `labels` - (Optional) A set of key/value label pairs to assign to the resource. Label keys must follow the requirements at https://cloud.google.com/resource-manager/docs/creating-managing-labels#requirements.
 
+  **Note**: This field is non-authoritative, and will only manage the labels present in your configuration.
+  Please refer to the field 'effective_labels' for all of the labels present on the resource.
+
+* `terraform_labels` -
+  The combination of labels configured directly on the resource and default labels configured on the provider.
+
+* `effective_labels` -
+  All of labels (key/value pairs) present on the resource in GCP, including the labels configured through Terraform, other clients and services.
 
 -----
 
 <a name="nested_cluster"></a>The `cluster` block supports the following arguments:
 
-* `cluster_id` - (Required) The ID of the Cloud Bigtable cluster.
+* `cluster_id` - (Required) The ID of the Cloud Bigtable cluster. Must be 6-30 characters and must only contain hyphens, lowercase letters and numbers.
 
 * `zone` - (Optional) The zone to create the Cloud Bigtable cluster in. If it not
 specified, the provider zone is used. Each cluster must have a different zone in the same region. Zones that support
 Bigtable instances are noted on the [Cloud Bigtable locations page](https://cloud.google.com/bigtable/docs/locations).
 
-* `num_nodes` - (Optional) The number of nodes in your Cloud Bigtable cluster.
-Required, with a minimum of `1` for a `PRODUCTION` instance. Must be left unset
-for a `DEVELOPMENT` instance.
+* `num_nodes` - (Optional) The number of nodes in the cluster.
+If no value is set, Cloud Bigtable automatically allocates nodes based on your data footprint and optimized for 50% storage utilization.
 
 * `autoscaling_config` - (Optional) [Autoscaling](https://cloud.google.com/bigtable/docs/autoscaling#parameters) config for the cluster, contains the following arguments:
 
@@ -144,10 +153,37 @@ for a `DEVELOPMENT` instance.
 In addition to the arguments listed above, the following computed attributes are exported:
 
 * `id` - an identifier for the resource with format `projects/{{project}}/instances/{{name}}`
+* `cluster.0.state` - describes the current state of the cluster.
+
+## Timeouts
+
+This resource provides the following
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options:
+
+- `create` - Default is 60 minutes.
+- `update` - Default is 60 minutes.
+- `read` - Default is 60 minutes.
+
+Adding clusters to existing instances can take a long time. Consider setting a higher value to timeouts if you plan on doing that.
 
 ## Import
 
 Bigtable Instances can be imported using any of these accepted formats:
+
+* `projects/{{project}}/instances/{{name}}`
+* `{{project}}/{{name}}`
+* `{{name}}`
+
+In Terraform v1.5.0 and later, use an [`import` block](https://developer.hashicorp.com/terraform/language/import) to Bigtable Instances using one of the formats above. For example:
+
+```tf
+import {
+  id = "projects/{{project}}/instances/{{name}}"
+  to = google_bigtable_instance.default
+}
+```
+
+When using the [`terraform import` command](https://developer.hashicorp.com/terraform/cli/commands/import), Bigtable Instances can be imported using one of the formats above. For example:
 
 ```
 $ terraform import google_bigtable_instance.default projects/{{project}}/instances/{{name}}

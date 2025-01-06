@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Key Management Service"
-page_title: "Google: google_kms_secret"
 description: |-
   Provides access to secret data encrypted with Google Cloud KMS
 ---
 
-# google\_kms\_secret
+# google_kms_secret
 
 This data source allows you to use data encrypted with Google Cloud KMS
 within your resource definitions.

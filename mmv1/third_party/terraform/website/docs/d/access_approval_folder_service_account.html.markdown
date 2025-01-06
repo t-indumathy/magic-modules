@@ -1,11 +1,10 @@
 ---
 subcategory: "Access Approval"
-page_title: "Google: google_access_approval_folder_service_account"
 description: |-
   Get the email address of a folder's Access Approval service account.
 ---
 
-# google\_access\_approval\_folder\_service\_account
+# google_access_approval_folder_service_account
 
 Get the email address of a folder's Access Approval service account.
 

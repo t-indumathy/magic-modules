@@ -1,11 +1,10 @@
 ---
 subcategory: "Compute Engine"
-page_title: "Google: google_compute_router_status"
 description: |-
   Get a Cloud Router's Status.
 ---
 
-# google\_compute\_router\_status
+# google_compute_router_status
 
 Get a Cloud Router's status within GCE from its name and region. This data source exposes the
 routes learned by a Cloud Router via BGP peers.

@@ -1,12 +1,11 @@
 ---
 subcategory: "Cloud (Stackdriver) Monitoring"
-page_title: "Google: google_monitoring_istio_canonical_service"
 description: |-
   An Monitoring Service resource created automatically by GCP to monitor an
   Istio Canonical service.
 ---
 
-# google\_monitoring\_istio\_canonical\_service
+# google_monitoring_istio_canonical_service
 
 A Monitoring Service is the root resource under which operational aspects of a
 generic service are accessible. A service is some discrete, autonomous, and

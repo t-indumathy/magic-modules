@@ -1,6 +1,5 @@
 ---
 subcategory: "Cloud Bigtable"
-page_title: "Google: google_bigtable_gc_policy"
 description: |-
   Creates a Google Cloud Bigtable GC Policy inside a family.
 ---
@@ -167,6 +166,10 @@ The following arguments are supported:
 
     Possible values are: `ABANDON`.
 
+* `ignore_warnings` - (Optional) Boolean for whether to allow ignoring warnings when updating the gc policy.
+    Setting this to `true` allows relaxing the gc policy for replicated clusters by up to 90 days, but keep in mind this may increase how long clusters are inconsistent. Make sure
+    you understand the risks listed at https://cloud.google.com/bigtable/docs/garbage-collection#increasing before setting this option.
+
 -----
 
 `max_age` supports the following arguments:
@@ -190,6 +193,14 @@ The following arguments are supported:
 ## Attributes Reference
 
 Only the arguments listed above are exposed as attributes.
+
+## Timeouts
+
+This resource provides the following
+[Timeouts](https://developer.hashicorp.com/terraform/plugin/sdkv2/resources/retries-and-customizable-timeouts) configuration options:
+
+- `create` - Default is 20 minutes.
+- `delete` - Default is 20 minutes.
 
 ## Import
 

@@ -1,12 +1,11 @@
 ---
 subcategory: "Cloud Platform"
-page_title: "Google: google_iam_policy"
 description: |-
   Generates an IAM policy that can be referenced by other resources, applying
   the policy to them.
 ---
 
-# google\_iam\_policy
+# google_iam_policy
 
 Generates an IAM policy document that may be referenced by and applied to
 other Google Cloud Platform IAM resources, such as the `google_project_iam_policy` resource.

@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud Pub/Sub"
-page_title: "Google: google_pubsub_topic"
 description: |-
   Get information about a Google Cloud Pub/Sub Topic.
 ---
 
-# google\_pubsub\_topic
+# google_pubsub_topic
 
 Get information about a Google Cloud Pub/Sub Topic. For more information see
 the [official documentation](https://cloud.google.com/pubsub/docs/)

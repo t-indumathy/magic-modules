@@ -1,11 +1,10 @@
 ---
 subcategory: "App Engine"
-page_title: "Google: google_app_engine_default_service_account"
 description: |-
   Retrieve the default App Engine service account used in this project
 ---
 
-# google\_app_engine\_default\_service\_account
+# google_app_engine_default_service_account
 
 Use this data source to retrieve the default App Engine service account for the specified project.
 

@@ -1,11 +1,10 @@
 ---
 subcategory: "Tags"
-page_title: "Google: google_tags_tag_value"
 description: |-
   Get a tag value from the parent key and short_name.
 ---
 
-# google\_tags\_tag\_value
+# google_tags_tag_value
 
 Get a tag value by `parent` key and `short_name`.
 

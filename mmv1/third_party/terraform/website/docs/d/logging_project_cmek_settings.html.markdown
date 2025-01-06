@@ -1,11 +1,10 @@
 ---
 subcategory: "Cloud (Stackdriver) Logging"
-page_title: "Google: google_logging_project_cmek_settings"
 description: |-
   Describes the customer-managed encryption key (CMEK) settings associated with a project.
 ---
 
-# google\_logging\_project\_cmek\_settings
+# google_logging_project_cmek_settings
 
 Describes the customer-managed encryption key (CMEK) settings associated with a project.
 
